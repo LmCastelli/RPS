@@ -1,0 +1,81 @@
+label {
+    width:100%;
+    display: flex;
+    margin-left: 15%;
+    font-size: x-large;
+}
+
+.Scoreboard {
+    display: flex;
+    text-align: center;
+}
+.Score {
+    width:50%;
+}
+
+.HandDisplay {
+    display: flex;
+    text-align: center;
+}
+.Hands {
+    width:50%;
+}
+
+.HandContainer {
+    display: flex;
+}
+.HumanHands {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width:47%;
+    margin-left: 3%;
+}
+.HumanHands h1 {
+    width: 100%;
+    margin: 0;
+}
+.HandSelector {
+    display: flex;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.Options {
+    text-align: center;
+    width: 50%;
+    margin-top: 10%;
+}
+
+.imgContainer {
+    border: solid red;
+}
+
+.image {
+    max-width: 40%;
+}
+
+.CompHandContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    width: 50%;
+}
+.CompHandContainer h1 {
+    width:100%;
+    margin-top: 0%;
+    margin-bottom: 4%;
+}
+
+.CompImgContainer {
+    width:50%;
+    margin-left: 25%;
+    margin-bottom: 2%;
+    max-height: 34%;
+    border: solid blue;
+}
+.CompImage {
+    max-width: 60%;
+    max-height: 100%;
+}
