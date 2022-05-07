@@ -38,21 +38,29 @@ label {
 .HandSelector {
     display: flex;
     width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 0%;
+    padding-bottom: 2%;
 }
 .Options {
     text-align: center;
     width: 50%;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
-.imgContainer {
-    border: solid red;
+.Rock {
+    max-width: 45%;
+    margin: 10%;
+    margin-right: 45%;
 }
-
-.image {
-    max-width: 40%;
+.Paper {
+    max-width: 35%;
+    margin: 5%;
+    margin-right: 55%;
+}
+.Scissors {
+    max-width: 45%;
+    margin-top: 5%;
+    margin-right: 70%;
 }
 
 .CompHandContainer {
@@ -65,17 +73,19 @@ label {
 .CompHandContainer h1 {
     width:100%;
     margin-top: 0%;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
 }
 
 .CompImgContainer {
     width:50%;
-    margin-left: 25%;
-    margin-bottom: 2%;
+    margin-left: 35%;
+    margin-bottom: 1%;
     max-height: 34%;
-    border: solid blue;
 }
 .CompImage {
     max-width: 60%;
     max-height: 100%;
+}
+.Reset {
+    margin-left: 3%;
 }

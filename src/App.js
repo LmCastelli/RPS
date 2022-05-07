@@ -6,12 +6,12 @@ function App() {
 
   const [firstHand, setFirstHand] = useState("");
   const [secondHand, setSecondHand] = useState("")
-  const [compHand, setCompHand] = useState({firstComp: null, secondComp: null});
+  const [compHand, setCompHand] = useState({firstComp: "Rock", secondComp: "Paper"});
   let [playerScore, setPlayerScore] = useState(0)
   let [compScore, setCompScore] = useState(0)
   const [win, setWin] = useState(false)
 
-  const options = ["rock", "paper", "scissors"]
+  const options = ["Rock", "Paper", "Scissors"]
 
   const handlePlayerSubmit = e => {
     e.preventDefault();
@@ -50,11 +50,11 @@ function App() {
       </div>
       <div className="HandDisplay">
         <div className="Hands">
-          <p>Player hands: {firstHand} {secondHand}</p>
+          <p>Player hands: {firstHand} & {secondHand}</p>
         </div>
         <div className="Hands">
           { (compHand.firstComp!==null) ?
-            <p>Comp hand: {compHand.firstComp} {compHand.secondComp}</p>:null
+            <p>Comp hand: {compHand.firstComp} & {compHand.secondComp}</p>:null
           }
         </div>
       </div>
@@ -74,7 +74,7 @@ function App() {
           <label>Rock
             <input 
               type="radio"
-              value="rock"
+              value="Rock"
               name="firstHand"
               onChange={handleFirstHandChange}
             />
@@ -83,7 +83,7 @@ function App() {
           <label>Paper
             <input 
               type="radio"
-              value="paper"
+              value="Paper"
               name="firstHand"
               onChange={handleFirstHandChange}
             />
@@ -92,14 +92,20 @@ function App() {
           <label>Scissors
             <input 
               type="radio"
-              value="scissors"
+              value="Scissors"
               name="firstHand"
               onChange={handleFirstHandChange}
             />
           </label>
           </div>
           <div className="imgContainer">
-            <img className="image" src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png" alt="rock" />
+            { (firstHand === "Rock")?
+              <img className="Rock" src="https://townsquare.media/site/723/files/2015/04/Pet-Rock-12.jpg?w=980&q=75" alt="rock" />
+              :(firstHand === "Paper")?
+              <img className="Paper" src="https://www.clipartkey.com/mpngs/m/25-259242_collection-of-notebook-loose-leaf-paper-cartoon.png" alt="paper" />
+              :
+              <img className="Scissors" src="https://thumbs.dreamstime.com/b/angry-scissors-cartoon-vector-illustration-49122109.jpg" alt="scissors" />
+            }
           </div>
         </div>
         <h1>Second Hand</h1>
@@ -108,7 +114,7 @@ function App() {
           <label>Rock
             <input 
               type="radio"
-              value="rock"
+              value="Rock"
               name="secondHand"
               onChange={handleSecondHandChange}
             />
@@ -117,7 +123,7 @@ function App() {
           <label>Paper
             <input 
               type="radio"
-              value="paper"
+              value="Paper"
               name="secondHand"
               onChange={handleSecondHandChange}
             />
@@ -126,33 +132,52 @@ function App() {
           <label>Scissors
             <input 
               type="radio"
-              value="scissors"
+              value="Scissors"
               name="secondHand"
               onChange={handleSecondHandChange}
             />
           </label>
           </div>
           <div className="imgContainer">
-            <img className="image" src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png" alt="rock" />
+            { (secondHand === "Rock")?
+              <img className="Rock" src="https://townsquare.media/site/723/files/2015/04/Pet-Rock-12.jpg?w=980&q=75" alt="rock" />
+              :(secondHand === "Paper")?
+              <img className="Paper" src="https://www.clipartkey.com/mpngs/m/25-259242_collection-of-notebook-loose-leaf-paper-cartoon.png" alt="paper" />
+              :
+              <img className="Scissors" src="https://thumbs.dreamstime.com/b/angry-scissors-cartoon-vector-illustration-49122109.jpg" alt="scissors" />
+            }
           </div>
         </div>
         
         <button>Submit</button>
       </form>:null
     }
-    
+    { !win ?
       <div className="CompHandContainer">
         <h1>Computer First Hand</h1>
         <div className="CompImgContainer">
-          <img className="CompImage" src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png" alt="rock" />
+          { (compHand.firstComp === "Rock")?
+            <img className="Rock" src="https://townsquare.media/site/723/files/2015/04/Pet-Rock-12.jpg?w=980&q=75" alt="rock" />
+            :(compHand.firstComp === "Paper")?
+            <img className="Paper" src="https://www.clipartkey.com/mpngs/m/25-259242_collection-of-notebook-loose-leaf-paper-cartoon.png" alt="paper" />
+            :
+            <img className="Scissors" src="https://thumbs.dreamstime.com/b/angry-scissors-cartoon-vector-illustration-49122109.jpg" alt="scissors" />
+          }
         </div>
         <h1>Computer Second Hand</h1>
         <div className="CompImgContainer">
-          <img className="CompImage" src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png" alt="rock" />
+        { (compHand.secondComp === "Rock")?
+            <img className="Rock" src="https://townsquare.media/site/723/files/2015/04/Pet-Rock-12.jpg?w=980&q=75" alt="rock" />
+            :(compHand.secondComp === "Paper")?
+            <img className="Paper" src="https://www.clipartkey.com/mpngs/m/25-259242_collection-of-notebook-loose-leaf-paper-cartoon.png" alt="paper" />
+            :
+            <img className="Scissors" src="https://thumbs.dreamstime.com/b/angry-scissors-cartoon-vector-illustration-49122109.jpg" alt="scissors" />
+          }
         </div>
+      </div>:null
+    }
       </div>
-      </div>
-      <button onClick={handleReset}>Restart</button>
+      <button className="Reset" onClick={handleReset}>Restart</button>
     </div>
   );
 }

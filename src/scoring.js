@@ -3,16 +3,16 @@ function getScore(scoringHand, opponentHand) {
 
     for(let i=0; i<scoringHand.length; i++){
         for(let j=0; j<opponentHand.length; j++){
-            if(scoringHand[i] === "rock"){
-                if(opponentHand[j] === "scissors"){
+            if(scoringHand[i] === "Rock"){
+                if(opponentHand[j] === "Scissors"){
                     score += 1;
                 };
-            }else if(scoringHand[i] === "paper"){
-                if(opponentHand[j] === "rock"){
+            }else if(scoringHand[i] === "Paper"){
+                if(opponentHand[j] === "Rock"){
                     score += 1;
                 };
             }else{
-                if(opponentHand[j] === "paper"){
+                if(opponentHand[j] === "Paper"){
                     score += 1;
                 };
             }
