@@ -15,7 +15,10 @@ Runs the app in development mode, on http://localhost:3000. Refreshing will rest
 
 # Future ideas:
 • 3 or 4 players total, preferably only using one had each
+
 • RPG type game, I'm sure it's been done before but I think it would be fun to make 
+
 • Different "characters" with a simple passive quirk that gets added to the game
+
 • Some weirdly complex table of options instead of the standard A beats B beats C beats A
 
