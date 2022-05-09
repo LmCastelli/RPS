@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Hello! Thank you for checking out some of my projects! Below are some notes on what this project is, as well as some notes to myself for when I come back and update/build off this project. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a small game I made just as a refresher/practice on simple, single page React app. 
 
-## Available Scripts
+It's essentially Rock, Paper, Scissors, with the exception that the player and the computer shoot with two hands. Oh and there's goofy little clip art with each option. The game will play until one side reaches 20 points, upon which the toggle to show the entire game will turn to null and the only option will be to restart.
 
-In the project directory, you can run:
+The only separate file from App.js is the function that calculates how scoring works (loops through the hands and uses an if/else statement) and the function that takes the player and computer hands from state and sends them to the scoring function. I should and hopefully will go back and make the scoreboard, player hands, and computer hands all separate components for cleanliness and clarity, but for now they all reside within App.js.
 
-### `npm start`
+Additionally, the styling could/should be more clean, I need to refresh on some CSS when handling images, so I won't have to make three separate classes for the different sized images, as well as making the container stay the same and not slightly adjusting the total size. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Radio buttons are used for selecting the hand and updating state, I absolutely could have made the player hand an object too, but this is just the first mock-up and therefore has more simple state management. I'd like to do a more complex version of RPS in the future, and I will definitely build off these ideas. Although each button set controls its respective "hand", it is only one form that the submit button handles. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# npm start 
+Runs the app in development mode, on http://localhost:3000. Refreshing will restart the game, however there is a restart button that will be the only option once the game is over, outside of refreshing the page of course.
 
-### `npm test`
+# Future ideas:
+• 3 or 4 players total, preferably only using one had each
+• RPG type game, I'm sure it's been done before but I think it would be fun to make 
+• Different "characters" with a simple passive quirk that gets added to the game
+• Some weirdly complex table of options instead of the standard A beats B beats C beats A
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

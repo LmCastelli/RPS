@@ -19,7 +19,7 @@ function App() {
     let tempScore = scoring([firstHand, secondHand],[comp1, comp2])
     setPlayerScore(playerScore += tempScore[0])
     setCompScore(compScore += tempScore[1])
-    if(playerScore>20 || compScore > 20){
+    if(playerScore >=20 || compScore >= 20){
       setWin(true)
     }
   }
