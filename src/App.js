@@ -10,9 +10,7 @@ function App() {
   let [playerScore, setPlayerScore] = useState(0)
   let [compScore, setCompScore] = useState(0)
   const [win, setWin] = useState(false)
-
   const options = ["Rock", "Paper", "Scissors"]
-
   const handlePlayerSubmit = e => {
     e.preventDefault();
     let comp1 = options[Math.floor(Math.random()*3)]
@@ -42,7 +40,7 @@ function App() {
     <div>
       <div className="Scoreboard">
         <div className="Score">
-          <h1>Here is your score: {playerScore}</h1>
+          <h1>Player Score: {playerScore}</h1>
         </div>
         <div className="Score">
           <h1>Computer's  score: {compScore}</h1>
@@ -59,13 +57,13 @@ function App() {
         </div>
       </div>
 
-
-
-
-
+      { win? 
+        <div>
+          <h1>The winner is: {playerScore>compScore? "Player":"Computer"}</h1>
+        </div>
+      :null}
 
     <div className="HandContainer">
-      
     { !win ?
       <form onSubmit={handlePlayerSubmit} className="HumanHands">
         <h1>First Hand</h1>
@@ -148,7 +146,6 @@ function App() {
             }
           </div>
         </div>
-        
         <button>Submit</button>
       </form>:null
     }

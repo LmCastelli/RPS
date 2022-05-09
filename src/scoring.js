@@ -1,6 +1,6 @@
 function getScore(scoringHand, opponentHand) {
     let score = 0;
-
+    
     for(let i=0; i<scoringHand.length; i++){
         for(let j=0; j<opponentHand.length; j++){
             if(scoringHand[i] === "Rock"){
@@ -22,7 +22,6 @@ function getScore(scoringHand, opponentHand) {
 }
 
 function scoring (playerHand,compHand)  {
-
     let playerScore = 0;
     let compScore = 0;
     const playerHands = playerHand;
@@ -33,6 +32,4 @@ function scoring (playerHand,compHand)  {
 
     return [playerScore, compScore];
 }
-
-
 export default scoring; 
